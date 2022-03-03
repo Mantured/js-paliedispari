@@ -68,18 +68,25 @@ while ( isNaN(userNumber) || (userNumber <= 0) || (userNumber > 5)  ){
     userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 };
 
-
 //numero randomico da 1 a 5
 let randomInt = (Math.floor(Math.random() * 5) + 1);
 console.log(randomInt);
 
-// somma del numero randomico ed il valore inserito dall'utente
+function isOddOrEven(number) { // sto dichiarando una funzione con un singolo argomento (che sarà poi la mia somma);
+    if (number % 2 === 0) return 'pari'; //se è pari mi ritorna il vaolre booleano vero o falso , in questo caso vero pari
+    else return 'dispari';  //sempre grazie a grazziella
+}
+
+if (isOddOrEven(randomInt + userNumber) === oddOrEven) {    //richiamo la funzione --> che mi restituisce un valore preciso che vado a verificarlo con quello inserito dall'utente
+    console.log('win')
+} else { // grazie a grazziella
+    console.log('loss')
+}
+
+/*
+
 let sum = (randomInt + userNumber);
 console.log(sum);
-
-/* function winOrLoss(var1, var2) {
-
-} */
 let result = "";
 
 if (sum % 2 === 0) { //se la somma è pari
@@ -96,7 +103,8 @@ if (sum % 2 === 0) { //se la somma è pari
     } else {
         console.log('loss'); // altrimenti ha perso
     }
-}
+} */
+
 
 
 
