@@ -63,14 +63,11 @@ while ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
 };
 
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
-// (userNumber > 0) && (userNumber <= 5) finchè non inserisce un numero che sia un numero e che sia 0 < X <= 5 continua a chiedermi il numero
-while ((isNaN(userNumber)) && ((userNumber <= 0) && (userNumber >= 5))){
+// (userNumber > 0) && (userNumber <= 5) finchè non inserisce un numero che sia un numero e che sia 0 < X <= 5 continua a chiedermi il numero && ((userNumber = 0) && (userNumber >= 5))
+while ( isNaN(userNumber) || (userNumber <= 0) || (userNumber > 5)  ){
     userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 };
 
-/* if ((userNumber > 0) && (userNumber <= 5)) {
-
-} */
 
 //numero randomico da 1 a 5
 let randomInt = (Math.floor(Math.random() * 5) + 1);
