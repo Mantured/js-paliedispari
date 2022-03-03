@@ -16,25 +16,36 @@
 */
 
 
-/* const userWord = prompt(('Inserisci una parola qualsiasi')).toLowerCase().trim();
-const palindrome = userWord.split('').reverse().join('');
-console.log(palindrome);
-console.log(userWord);
+// let userWord = prompt(('Inserisci una parola qualsiasi')).toLowerCase().trim();
 
+/**
+ *
+ * @param {*} word argoument che verrà poi gestito dalla funzione
+ * @returns ciò che mi "ritorna" è l'argomento solo reverse
+ */
 
+/*
+function checkPalindrome(word) {
+    let palindrome = word.split('').reverse().join('');
+    return word === palindrome;
+}
 
-if (userWord === palindrome) {
+// creo una condizione, finchè l'utente non inserisce un valore che sia diverso da numeri il prompt continua a chiedere di inserire un numero
+
+while (!(isNaN(userWord))) {
+    userWord = prompt(('Inserisci una parola qualsiasi')).toLowerCase().trim();
+}
+
+if (checkPalindrome(userWord)) {
     console.log('is a palindrome');
 } else {
-    console.log('is not');
-} */
-
-
-/* function checkPalindrome(palindrome) {
-    let palindrome = userWord.split('').reverse().join('');
-    return userWord === palindrome;
+    console.log('is not a palindrome');
 }
 */
+
+
+
+
 
 
 
@@ -50,14 +61,18 @@ if (userWord === palindrome) {
 */
 
 
-const oddOrEven = prompt('Pari o Dispari').toLowerCase().trim(); //devo fare un controllo chemi avvisi l'user "non hai inserito un valore corretto"
+/* let oddOrEven = prompt('Pari o Dispari').toLowerCase().trim(); */ //devo fare un controllo chemi avvisi l'user "non hai inserito un valore corretto"
 /* const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5')); */
 
-if (oddOrEven == 'pari') {
+/* while ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
+    oddOrEven = prompt('Pari o Dispari').toLowerCase().trim();
+}
+
+if (oddOrEven === 'pari') {
     console.log('pari');
 } else {
     console.log('dispari');
-}
+} */
 
 
 /*
