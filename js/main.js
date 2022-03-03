@@ -63,10 +63,14 @@ while ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
 };
 
 let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
-// (userNumber > 0) && (userNumber <= 5) mettiamolo in pausa che non mi funziona
-while ((isNaN(userNumber))) {
+// (userNumber > 0) && (userNumber <= 5) finchè non inserisce un numero che sia un numero e che sia 0 < X <= 5 continua a chiedermi il numero
+while ((isNaN(userNumber)) && ((userNumber <= 0) && (userNumber >= 5))){
     userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 };
+
+/* if ((userNumber > 0) && (userNumber <= 5)) {
+
+} */
 
 //numero randomico da 1 a 5
 let randomInt = (Math.floor(Math.random() * 5) + 1);
@@ -76,15 +80,10 @@ console.log(randomInt);
 let sum = (randomInt + userNumber);
 console.log(sum);
 
-let userChoice = "";
-let result =""
+/* function winOrLoss(var1, var2) {
 
-/* if (oddOrEven === 'pari') {
-    console.log('pari')
-} else {
-    console.log('dispari');
-}
- */
+} */
+let result = "";
 
 if (sum % 2 === 0) { //se la somma è pari
     result = 'pari'; //allora il valore di result è 'pari'
