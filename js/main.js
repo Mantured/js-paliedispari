@@ -14,6 +14,8 @@
             -->oppure la prendo la parola la divido con split la rigiro e dopo di che la ricompongo per controllare che sia uguale alla parola (valore) di partenza
 
 */
+
+
 /* const userWord = prompt(('Inserisci una parola qualsiasi')).toLowerCase().trim();
 const palindrome = userWord.split('').reverse().join('');
 console.log(palindrome);
@@ -32,7 +34,8 @@ if (userWord === palindrome) {
     let palindrome = userWord.split('').reverse().join('');
     return userWord === palindrome;
 }
- */
+*/
+
 
 
 
@@ -47,9 +50,17 @@ if (userWord === palindrome) {
 */
 
 
-const oddOrEven = prompt('Pari o Dispari'); //devo fare un controllo chemi avvisi l'user "non hai inserito un valore corretto"
-const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+const oddOrEven = prompt('Pari o Dispari').toLowerCase().trim(); //devo fare un controllo chemi avvisi l'user "non hai inserito un valore corretto"
+/* const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5')); */
 
+if (oddOrEven == 'pari') {
+    console.log('pari');
+} else {
+    console.log('dispari');
+}
+
+
+/*
 let randomInt = (Math.floor(Math.random() * 5) + 1);
 console.log(randomInt);
 
@@ -61,3 +72,4 @@ if (sum % 2 === 0) {
 } else {
     console.log('dispari');
 }
+ */
