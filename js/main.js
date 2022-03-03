@@ -44,11 +44,7 @@ if (checkPalindrome(userWord)) {
 */
 
 
-
-
-
-
-
+//! PARI O DISPARI
 
 
 /*
@@ -61,30 +57,55 @@ if (checkPalindrome(userWord)) {
 */
 
 
-/* let oddOrEven = prompt('Pari o Dispari').toLowerCase().trim(); */ //devo fare un controllo chemi avvisi l'user "non hai inserito un valore corretto"
-/* const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5')); */
-
-/* while ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
+let oddOrEven = prompt('Pari o Dispari').toLowerCase().trim(); //devo fare un controllo che mi avvisi l'user "non hai inserito un valore corretto"
+while ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
     oddOrEven = prompt('Pari o Dispari').toLowerCase().trim();
-}
+};
 
-if (oddOrEven === 'pari') {
-    console.log('pari');
-} else {
-    console.log('dispari');
-} */
+let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+// (userNumber > 0) && (userNumber <= 5) mettiamolo in pausa che non mi funziona
+while ((isNaN(userNumber))) {
+    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+};
 
-
-/*
+//numero randomico da 1 a 5
 let randomInt = (Math.floor(Math.random() * 5) + 1);
 console.log(randomInt);
 
+// somma del numero randomico ed il valore inserito dall'utente
 let sum = (randomInt + userNumber);
 console.log(sum);
 
-if (sum % 2 === 0) {
-    console.log('pari');
+let userChoice = "";
+let result =""
+
+/* if (oddOrEven === 'pari') {
+    console.log('pari')
 } else {
     console.log('dispari');
 }
  */
+
+if (sum % 2 === 0) { //se la somma è pari
+    result = 'pari'; //allora il valore di result è 'pari'
+    if (oddOrEven === result) { // if interno , se la scelta dell'utente è uguale a result allora win altrimenti loss
+        console.log('win');
+    } else {
+        console.log('loss');
+    }
+} else { // se non è pari è dispari "grazia a grazziella"
+    result = 'dispari'; // allora il valore di result è 'dispari'
+    if (oddOrEven === result) { // quindi se il valore di result è uguale alla scelta dell'utente ha vinto
+        console.log('win');
+    } else {
+        console.log('loss'); // altrimenti ha perso
+    }
+}
+
+
+
+
+
+
+
+
