@@ -71,10 +71,7 @@ document.getElementById('check-pal').addEventListener('click', function () {
     oddOrEven = prompt('Pari o Dispari').toLowerCase().trim();
 }; */
 
-let oddOrEven = document.querySelector('#input-odd-even').value.toLowerCase().trim();
-let inputNumber = document.getElementById('input-number').value;
-let userNumber = parseInt(inputNumber);
-let msgGame = document.querySelector('#odd-or-even');
+
 
 /* console.log(typeof oddOrEven);
 console.log(typeof userNumber); */
@@ -85,15 +82,35 @@ function isOddOrEven(number) { // sto dichiarando una funzione con un singolo ar
 }
 
 document.getElementById('submit').addEventListener('click', function () {
+    let oddOrEven = document.querySelector('#input-odd-even').value.toLowerCase().trim();
+    let inputNumber = document.getElementById('input-number').value;
+
+    let userNumber = parseInt(inputNumber);
+
+    console.log(userNumber);
+    console.log(oddOrEven);
+    console.log(typeof oddOrEven);
+
+    let msgGame = document.getElementById('odd-or-even');
+
+// perche non mi funziona?
     if ((oddOrEven != 'pari') && (oddOrEven != 'dispari')) {
         msgGame.innerHTML = 'devi scegliere o Pari o Dispari, non è difficile!';
+        console.log('step1');
+    } else {
+        console.log('step1 non vero');
     }
     if (isNaN(userNumber) || (userNumber <= 0) || (userNumber > 5)) {
         msgGame.innerHTML = 'devi inserire un numero! e che sia compreso da 1 a 5';
+        console.log('step2')
+    } else {
+        console.log('step2 non vero')
     }
-
     if ((oddOrEven != 'pari') && (oddOrEven != 'dispari') && (isNaN(userNumber) || (userNumber <= 0) || (userNumber > 5))) {
         msgGame.innerHTML = 'devi scegliere o Pari o Dispari e inserire un numero valido da 1 a 5';
+        console.log('step3');
+    } else {
+        console.log('step3 non vero')
     }
 
     /* let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5')); */
@@ -112,7 +129,6 @@ document.getElementById('submit').addEventListener('click', function () {
         msgGame.innerHTML = 'mi spiace, pure il caso ti ha voltato le spalle';
     }
 })
-
 
 /*
 
